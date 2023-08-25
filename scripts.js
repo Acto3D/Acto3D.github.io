@@ -1,64 +1,88 @@
 document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.querySelector('.carousel');
+    const descriptionDiv = document.querySelector('.image-description');
 
     const images = [
         './imgs/screen/sc1.png',
         './imgs/screen/sc2.png',
         './imgs/screen/sc3.png',
-        './imgs/screen/sc4.png'
+        './imgs/screen/sc4.png',
+        './imgs/screen/sc5.png'
     ];
+
+    const descriptions = [
+        "Acto3D: Turn fluorescent images into 3D on your laptop.",
+        "Adjust color and transparency at will. See fluorescence come alive!",
+        "Tissue-clearing meets light-sheet microscopy: A 3D view of the entire embryo.",
+        "Efficiently map 3D lumen structures.",
+        "Visualize fluorescence and vascular structures together, in real-time."
+    ];
+    
+
+    
 
     let currentIndex = 0;
 
     images.forEach((src, index) => {
         const img = document.createElement('img');
         img.src = src;
-        img.style.height = '400px';
-        img.style.objectFit = 'cover';
+        img.style.objectFit = 'contain';
         img.classList.add('carousel-image');
         if (index !== 0) {
             img.style.opacity = 0;
-            img.style.left = '100%';
+            img.style.transform = 'translate(100%, -50%)';
         } else {
-            img.style.opacity = 1;  // 一枚目の画像のopacityを1に設定
-            img.style.left = '0';   // 一枚目の画像のleftを0に設定
+            img.style.opacity = 1;
+            img.style.transform = 'translate(-50%, -50%)';
         }
         carousel.appendChild(img);
     })
+    // 最初の画像に対応する説明文をセット
+    descriptionDiv.textContent = descriptions[0];
+    descriptionDiv.style.opacity = 1;
 
     setInterval(() => {
         let nextIndex = (currentIndex + 1) % images.length;
-    
+
         carousel.children[currentIndex].style.opacity = 0;
-        carousel.children[currentIndex].style.left = '-100%';  
-    
-        setTimeout(() => {
-            carousel.children[currentIndex].style.left = '90%'; // 画像が左に完全に移動した後、非表示のまま右側に移動する
-        }, 500); // 1秒後（トランジション終了後）
-    
+        carousel.children[currentIndex].style.transform = 'translate(-150%, -50%)';
+
+        descriptionDiv.textContent = descriptions[nextIndex];  // 新しい説明文をセット
+        descriptionDiv.style.opacity = 1;  
+        // descriptionDiv.innerHTML = descriptions[nextIndex].replace(/\n/g, '<br>');
+
+
         setTimeout(() => {
             carousel.children[nextIndex].style.opacity = 1;
-            carousel.children[nextIndex].style.left = '0';  
-        }, 1000); // 1秒後に次の画像を中央に表示
-        currentIndex = nextIndex;
-    }, 3500); // 2秒のトランジション時間と5秒の表示時間を合わせて7秒に設定
-    
-    carousel.addEventListener('click', () => {
-        let nextIndex = (currentIndex + 1) % images.length;
-    
-        carousel.children[currentIndex].style.opacity = 0;
-        carousel.children[currentIndex].style.left = '-100%';
-    
+            carousel.children[nextIndex].style.transform = 'translate(-50%, -50%)';
+
+
+        }, 100);
+
+        let moveRightIndex = currentIndex;
         setTimeout(() => {
-            carousel.children[currentIndex].style.left = '90%'; // 画像が左に完全に移動した後、非表示のまま右側に移動する
-        }, 10);
-    
-        setTimeout(() => {
-            carousel.children[nextIndex].style.opacity = 1;
-            carousel.children[nextIndex].style.left = '0';
-        }, 1000);
+            carousel.children[moveRightIndex].style.transform = 'translate(100%, -50%)';
+        }, 2000);
+
         currentIndex = nextIndex;
-    });
+    }, 4000);
+    
+    // carousel.addEventListener('click', () => {
+    //     let nextIndex = (currentIndex + 1) % images.length;
+    
+    //     carousel.children[currentIndex].style.opacity = 0;
+    //     carousel.children[currentIndex].style.left = '-100%';
+    
+    //     setTimeout(() => {
+    //         carousel.children[currentIndex].style.left = '90%'; // 画像が左に完全に移動した後、非表示のまま右側に移動する
+    //     }, 10);
+    
+    //     setTimeout(() => {
+    //         carousel.children[nextIndex].style.opacity = 1;
+    //         carousel.children[nextIndex].style.left = '0';
+    //     }, 1000);
+    //     currentIndex = nextIndex;
+    // });
     
 
 });
