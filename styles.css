@@ -1,20 +1,46 @@
 body {
+    font-size: 1.3rem;
     font-family: 'Arial', sans-serif;
     background-color: #111;
     color: #fff;
     margin: 0;
-    padding: 0;
+    padding-top: 120px; /* この値はheaderの高さに合わせて調整してください */
+}
+
+
+
+body a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.5s;
+    color: rgb(122, 201, 244)
+}
+
+body a:hover {
+    color: #00A6FF;
 }
 
 header {
     display: flex;
-    justify-content: space-between; /* 両端に要素を配置する */
-    align-items: center;
-    padding: 1rem 20rem; /* 両側のパディングを増やして、ロゴとナビゲーションの間隔を開ける */
+    justify-content: center; /* header-contentを中央に配置 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+.header-content {
+    display: flex;
+    width: 70%;
+    justify-content: space-between; /* アイコンとナビゲーションを両端に配置 */
+    align-items: center;
+    padding: 2rem 2rem; /* パディングをパーセンテージで調整 */
+}
 
 .logo-section {
     display: flex;
@@ -31,11 +57,9 @@ header {
     font-weight: bold;
 }
 
-
 nav {
-    flex: 1; /* ナビゲーションリンクを右側に強制的に寄せるために拡張 */
     display: flex;
-    justify-content: flex-end; /* 右側に寄せる */
+    justify-content: flex-end;
 }
 
 nav a {
@@ -43,7 +67,7 @@ nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    transition: color 0.2s;
+    transition: color 0.5s;
 }
 
 nav a:hover {
@@ -55,26 +79,72 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    max-width: 900px;
-    height: 400px;
-    margin: 0 auto;
+    width: 65%;
+    height: 500px;
+    margin: 10px auto 0 auto;  /* 上部に10pxのmarginを追加 */
     overflow: hidden;
-    background-color: #f5f5f5;  /* 薄いグレーの背景色 */
+    /* background-color: #f5f5f5;   */
 }
-
 
 .carousel-image {
     position: absolute;
+    transition: opacity 1s, transform 1s;
     top: 50%;
     left: 50%;
-    transform: translate(37%, -50%);
-    transition: opacity 1s, left 1s;
-    max-height: 400px;
+    transform: translate(-50%, -50%);
+    height: 500px;
     width: auto;
+    object-fit: contain;
 }
 
-
+.image-description {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s;
+    opacity: 0; 
+    padding: 1rem 0px;
+    border-radius: 5px;
+}
 
 .description {
     padding: 2rem;
+}
+
+.highlight-text {
+    border: 2px solid #d8cecb20;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 20px auto;
+    color: #fff;  /* 文字色を白に変更 */
+    padding: 10px;
+    width: 65%;  /* 横幅を70%に設定 */
+    background-color: rgb(31, 28, 28);
+}
+
+.highlight-text strong {
+    font-weight: bold;
+    font-size: 1.5rem; /* サイズを少し大きくして、太字にする */
+    color: #fbdf41; /* ゴールドの色でさらに目立たせる */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); /* テキストシャドウを追加して立体感を出す */
+}
+.acto3d-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 50px; /* 上部からのスペースを追加 */
+    padding: 1rem 0;  /* 上下のパディングを追加 */
+    text-align: center; /* テキストを中央寄せ */
+}
+
+footer hr {
+    width: 70%;
+    margin: 0 auto 20px auto; /* 上下は0、左右はautoで中央に配置 */
+    border-color: rgba(255, 255, 255, 0.3); /* 薄い白色の罫線 */
 }
