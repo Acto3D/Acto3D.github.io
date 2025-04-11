@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acto3D</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/slick-theme.css"
+    /> -->
+  </head>
+  <body>
+    <!-- header -->
+    <header class="l-header">
+      <div class="l-header__inner">
+        <div class="l-header__logo">
+          <img src="./assets/img/icon.png" alt="Acto3D logo" />
+        </div>
+        <div class="l-header__title">Acto3D</div>
+        <nav class="l-header__nav">
+          <ul class="l-header__nav__list">
+            <li><a href="#"> Home</a></li>
+            <li>
+              <a
+                href="https://github.com/Acto3D/Acto3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="#download">Download</a></li>
+            <li>
+              <a
+                href="https://github.com/Acto3D/Acto3D/blob/main/instruction.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instructions</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="l-top">
+      <div class="l-top__slider">
+        <ul class="l-top__slider__slick">
+          <li><img src="./assets/img/slick/sc0.webp" alt="" /></li>
+          <li><img src="./assets/img/slick/sc1.png" alt="" /></li>
+          <li><img src="./assets/img/slick/sc2.png" alt="" /></li>
+          <li><img src="./assets/img/slick/sc3.png" alt="" /></li>
+          <li><img src="./assets/img/slick/sc5.png" alt="" /></li>
+          <li><img src="./assets/img/slick/sc4.png" alt="" /></li>
+        </ul>
+      </div>
+
+      <!-- section bar -->
+      <div class="c-grad-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- main contents -->
+      <section class="l-contents">
+        <div class="l-contents__inner">
+          <!-- パネル1 -->
+          <div class="l-contents__panel panel-1">
+            <div class="l-contents__panel-text panel-1">
+              <h1>3D Microscopy Visualization, <br />Anywhere, Anytime</h1>
+              <h2>Acto3D brings high-end volume rendering to your mac.</h2>
+              <p>
+                Acto3D is optimized to take full advantage of Apple silicon,
+                delivering remarkably smooth performance using only your Mac’s
+                built-in GPU. With Acto3D, researchers can now explore complex
+                volumetric data directly on a MacBook. Whether in the lab, at
+                home, or during a conference, powerful 3D insights are always at
+                your fingertips.
+              </p>
+            </div>
+            <div class="l-contents__panel-img panel-1">
+              <img src="./assets/img/acto3d-preview.webp" alt="" />
+            </div>
+          </div>
+
+          <!-- パネル2 -->
+          <div class="l-contents__panel panel-2">
+            <div class="l-contents__panel-text panel-2">
+              <h1>Effortless 3D Visualization, <br />Straight from Fiji</h1>
+              <div class="l-contents__panel-img panel-2">
+                <img src="./assets/img/fiji.png" alt="" />
+                <img src="./assets/img/arrow.svg" alt="" />
+                <img src="./assets/img/icon.png" alt="" />
+              </div>
+              <p>
+                All you need to do is convert your fluorescence images to TIFF
+                with Fiji.
+              </p>
+            </div>
+          </div>
+
+          <!-- パネル3 -->
+          <div class="l-contents__panel panel-3">
+            <div class="l-contents__panel-img panel-3">
+              <img src="./assets/img/transfer_editing.png" alt="" / class="br10
+              bs">
+            </div>
+            <div class="l-contents__panel-text panel-3">
+              <h1>
+                Precision Control<br />
+                Over Volume Rendering
+              </h1>
+              <h2>
+                Intuitive transfer function editing with real-time feedback.
+              </h2>
+              <p>
+                Acto3D provides a fully interactive transfer function editor,
+                allowing seamless adjustment of color and opacity curves across
+                multiple channels. Users can fine-tune rendering in real time,
+                enhancing contrast and highlighting specific features within
+                complex volumetric datasets.
+              </p>
+            </div>
+          </div>
+
+          <!-- パネル4 -->
+          <div class="l-contents__panel-block">
+            <div class="l-contents__panel panel-4">
+              <div class="l-contents__panel-text panel-4">
+                <h1>3D Masking</h1>
+                <div class="l-contents__panel-img panel-4">
+                  <img src="./assets/img/sc4.png" alt="" / class="">
+                </div>
+                <p>
+                  Efficient segmentation of enclosed structures — from any angle
+                  in 3D.
+                </p>
+              </div>
+            </div>
+
+            <div class="l-contents__panel panel-5" id="download">
+              <div class="l-contents__panel-text panel-5">
+                <h1>Ready to use</h1>
+                <h2>Just download it</h2>
+                <div class="l-contents__panel-img panel-5">
+                  <img
+                    src="./assets/img/icon.png"
+                    alt=""
+                    class="dl_acto3d_logo"
+                  /><br />
+                  <a
+                    href="https://apps.apple.com/us/app/acto3d/id1599768775"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="c-dl-links"
+                    ><img
+                      src="./assets/img/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
+                      alt=""
+                      class="c-dl-links__img"
+                    /> </a
+                  ><br />
+                  <a
+                    href="https://github.com/Acto3D/Acto3D/releases"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="c-dl-links"
+                    ><div class="github-icons">
+                      <img
+                        src="./assets/img/github-mark.svg"
+                        alt="GitHub icon"
+                        class="c-dl-links__img"
+                      /><img
+                        src="./assets/img/GitHub_Logo.png"
+                        alt="GitHub logo"
+                        class="c-dl-links__img"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-contents full">
+        <div class="l-contents__inner">
+          <div class="l-contents__extra">
+            <h1>Even More Freedom in Visualization</h1>
+            <div class="l-contents__extra__panel">
+              <div class="img-only">
+                <img src="./assets/img/free-section.webp" alt="" />
+                <h2>Free Sectioning</h2>
+              </div>
+              <div class="img-only">
+                <img src="./assets/img/animation.webp" alt="" />
+                <h2>Animation</h2>
+              </div>
+              <div class="code-panel">
+                <div class="code-block">
+                  <pre>
+kernel void FTB(){
+  Cin = Cout;
+  Ain = Aout;
+  Cvoxel = (float4)args.tex.sample
+        (args.smp, texCoordinate);
+}</pre
+                  >
+                </div>
+                <!-- <h2>Animation</h2> -->
+                <h2>Programmable Shaders</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- section bar -->
+    <div class="c-grad-bar reverse">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <footer class="l-footer">
+      Copyright © 2023 Naoki Takeshita. All rights reserved.
+    </footer>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.c-grad-bar span {
+  display: block;
+  background-color: #fff;
+}
+.c-grad-bar span:nth-child(1) {
+  width: 50%;
+  height: 3px;
+  background-color: #5a5a5a;
+  margin: 0 auto 8px;
+  border-radius: 1.5px;
+}
+.c-grad-bar span:nth-child(2) {
+  width: 70%;
+  height: 4px;
+  background-color: #7b7b7b;
+  margin: 0 auto 8px;
+  border-radius: 2px;
+}/*# sourceMappingURL=grad-bar.css.map */
