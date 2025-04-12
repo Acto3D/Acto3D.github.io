@@ -3,3 +3,10 @@
 *.sass.map
 *.scss.map
 sass
+
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
