@@ -145,6 +145,7 @@ body {
   font-size: 18px;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  color: #1d1d1d;
 }
 @media (max-width: 1280px) {
   body {
@@ -614,6 +615,7 @@ img {
   font-weight: 400;
   line-height: 1.2em;
   margin-left: 15px;
+  color: #292929;
 }
 @media (max-width: 1280px) {
   .l-contents__panel-text h2 {
@@ -631,8 +633,9 @@ img {
 }
 .l-contents__panel-text p {
   font-size: 1em;
-  font-weight: 100;
-  line-height: 21px;
+  font-weight: 400;
+  line-height: 1.4em;
+  color: #656565;
 }
 .l-contents__panel-text.panel-1 {
   width: max(100% - 27vw, 100% - 350px);
