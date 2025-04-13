@@ -21,6 +21,21 @@ $(function () {
     );
     console.log($("#downloadSection").height());
   });
+
+  $(window).scroll(function () {
+    const wHeight = $(window).scrollTop();
+    const windowH = $(window).height();
+
+    const targetH = $("#downloadSection").offset().top;
+
+    console.log(`${windowH + wHeight}, ${targetH}`);
+
+    if (wHeight + wHeight > 300 + $("#downloadSection").offset().top) {
+      $(".c-dl-links__img").addClass("isActive");
+    } else if (wHeight + wHeight + 300 < $("#downloadSection").offset().top) {
+      $(".c-dl-links__img").removeClass("isActive");
+    }
+  });
 });
 
 jQuery.event.special.touchstart = {
