@@ -11,7 +11,18 @@ $(function () {
     // adaptiveHeight: true,
     accessibility: false,
   });
+
+  $("#gotoDownloadSection").on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: $("#downloadSection").offset().top - 100,
+      },
+      400
+    );
+    console.log($("#downloadSection").height());
+  });
 });
+
 jQuery.event.special.touchstart = {
   setup: function (_, ns, handle) {
     if (ns.includes("noPreventDefault")) {

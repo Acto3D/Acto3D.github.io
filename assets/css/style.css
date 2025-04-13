@@ -134,8 +134,8 @@ table {
   border-spacing: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+* {
+  transition: all 1000ms ease;
 }
 
 body {
