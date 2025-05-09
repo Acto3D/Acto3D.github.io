@@ -344,6 +344,14 @@ p {
     flex-direction: column;
     margin-top: 150px;
     min-height: 100vh;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 60px;
+  }
+}
+@media (max-width: 767px) and (orientation: portrait) {
+  .l-top__hero {
+    padding: 0 20px;
   }
 }
 .l-top__hero-container {
@@ -1647,8 +1655,9 @@ p {
 }
 @media (max-width: 980px) {
   .scroll-indicator {
-    left: 0;
+    left: 15px;
     top: calc(-150px + 100vh - 150px);
+    transform: none;
   }
 }
 @media (max-width: 767px) and (orientation: portrait) {
@@ -1734,7 +1743,8 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-x: clip;
+  overflow-x: hidden; /* fallback */
+  overflow-x: clip; /* supported in modern browsers */
   pointer-events: none;
   z-index: 0;
 }
