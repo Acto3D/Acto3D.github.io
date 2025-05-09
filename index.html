@@ -49,6 +49,10 @@
       rel="stylesheet"
     />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
@@ -71,6 +75,9 @@
         <nav class="l-header__nav">
           <ul class="l-header__nav__list">
             <li><a href="#">Top</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+            <li><a href="#download">Download</a></li>
             <li>
               <a
                 href="https://github.com/Acto3D/Acto3D"
@@ -79,209 +86,421 @@
                 >GitHub</a
               >
             </li>
-            <li>
-              <a href="#downloadSection" id="gotoDownloadSection">Download</a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Acto3D/Acto3D/blob/main/instruction.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Instructions</a
-              >
-            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main class="l-top">
-      <div class="l-top__slider">
-        <ul class="l-top__slider__slick">
-          <li><img src="./assets/img/slick/sc0.webp" alt="" /></li>
-          <li><img src="./assets/img/slick/sc1.png" alt="" /></li>
-          <li><img src="./assets/img/slick/sc2.png" alt="" /></li>
-          <li><img src="./assets/img/slick/sc3.png" alt="" /></li>
-          <li><img src="./assets/img/slick/sc5.png" alt="" /></li>
-          <li><img src="./assets/img/slick/sc4.png" alt="" /></li>
-        </ul>
+      <div class="c-blob-container">
+        <div class="blob blob-1 animate"></div>
+        <div class="blob blob-2 animate"></div>
+        <div class="blob blob-3 animate"></div>
       </div>
-
-      <!-- section bar -->
-      <div class="c-grad-bar">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <!-- main contents -->
-      <section class="l-contents">
-        <div class="l-contents__inner">
-          <!-- パネル1 -->
-          <div class="l-contents__panel panel-1">
-            <div class="l-contents__panel-text panel-1">
-              <h1>3D Microscopy Visualization, <br />Anywhere, Anytime</h1>
-              <h2>Acto3D brings high-end volume rendering to your mac.</h2>
-              <p>
-                Acto3D is optimized to take full advantage of Apple silicon,
-                delivering remarkably smooth performance using only your Mac’s
-                built-in GPU. With Acto3D, researchers can now explore complex
-                volumetric data directly on a MacBook. Whether in the lab, at
-                home, or during a conference, powerful 3D insights are always at
-                your fingertips.
-              </p>
-            </div>
-            <div class="l-contents__panel-img panel-1">
-              <img src="./assets/img/acto3d-preview.webp" alt="" />
+      <section class="l-top__hero">
+        <div class="l-top__hero-container">
+          <div class="l-top__hero-subtitle neon-blue">
+            Apple silicon optimized
+          </div>
+          <h1 class="l-top__hero-title">
+            Transform Microscopy Data Into
+            <span class="neon-green">Stunning 3D</span> Visualizations
+          </h1>
+          <p class="l-top__hero-description">
+            Acto3D brings your fluorescence microscopy images to life with
+            powerful real-time volume rendering technology, optimized
+            specifically for Apple Silicon to deliver exceptional performance.
+          </p>
+          <div class="l-top__btn">
+            <a href="#download" class="c-btn c-btn--green">Download now</a>
+          </div>
+        </div>
+        <div class="l-top__hero-paper-container">
+          <div class="l-top__hero-paper-image">
+            <img src="./assets/img/cover.png" alt="Development" />
+            <p>
+              Acto3D was selected for the cover of Development, Volume 151,
+              Issue 8 (April 2024).
+            </p>
+            <div style="text-align: center">
+              <a
+                href="https://doi.org/10.1242/dev.202550"
+                class="c-btn c-btn--pink"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View journal</a
+              >
             </div>
           </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrows">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+      <!-- features -->
+      <section id="features" class="l-features">
+        <div class="c-blob-container">
+          <div class="blob blob-3"></div>
+          <div class="blob blob-1"></div>
+        </div>
+        <div class="l-features__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">
+              Advanced <span class="neon-pink">Visualization</span> Tools
+            </h2>
+            <p class="l-section__subtitle">
+              Acto3D delivers a comprehensive suite of specialized tools
+              designed to explore complex volumetric data with unparalleled
+              clarity and precision.
+            </p>
+          </div>
 
-          <!-- パネル2 -->
-          <div class="l-contents__panel panel-2">
-            <div class="l-contents__panel-text panel-2">
-              <h1>Effortless 3D Visualization, <br />Straight from Fiji</h1>
-              <div class="l-contents__panel-img panel-2">
-                <img src="./assets/img/fiji.png" alt="" />
-                <img src="./assets/img/arrow.svg" alt="" />
-                <img src="./assets/img/icon.png" alt="" />
+          <div class="l-features__grid">
+            <div class="l-features__card animate-on-scroll visible">
+              <div class="l-features__icon neon-blue">
+                <i class="fas fa-cube"></i>
               </div>
-              <p>
-                All you need to do is convert your fluorescence images to TIFF
-                with Fiji.
+              <h3 class="l-features__title">Real-Time Rendering</h3>
+              <p class="l-features__description">
+                Experience fluid, interactive exploration of volumetric
+                microscopy data with rendering optimized for Apple Silicon's
+                powerful GPU capabilities.
+              </p>
+            </div>
+
+            <div class="l-features__card animate-on-scroll visible">
+              <div class="l-features__icon neon-green">
+                <i class="fas fa-sliders"></i>
+              </div>
+              <h3 class="l-features__title">Transfer Functions</h3>
+              <p class="l-features__description">
+                Fine-tune color and opacity with intuitive controls for
+                real-time feedback and perfect visualization of specific
+                structures within your data.
+              </p>
+            </div>
+
+            <div class="l-features__card animate-on-scroll visible">
+              <div class="l-features__icon neon-pink">
+                <i class="fas fa-cut"></i>
+              </div>
+              <h3 class="l-features__title">Free Sectioning</h3>
+              <p class="l-features__description">
+                Slice through your 3D data at any angle to reveal internal
+                structures and relationships hidden in traditional 2D views.
+              </p>
+            </div>
+
+            <div class="l-features__card animate-on-scroll visible">
+              <div class="l-features__icon neon-blue">
+                <i class="fas fa-crop-alt"></i>
+              </div>
+              <h3 class="l-features__title">3D Masking</h3>
+              <p class="l-features__description">
+                Easily segment and isolate specific structures from any angle in
+                3D space for detailed analysis of complex samples.
+              </p>
+            </div>
+
+            <div class="l-features__card animate-on-scroll visible">
+              <div class="l-features__icon neon-green">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="l-features__title">Programmable Shaders</h3>
+              <p class="l-features__description">
+                Create custom visualization pipelines with programmable Metal
+                shaders, giving advanced users complete control over the
+                rendering process.
+              </p>
+            </div>
+
+            <div class="l-features__card animate-on-scroll visible">
+              <div class="l-features__icon neon-pink">
+                <i class="fas fa-film"></i>
+              </div>
+              <h3 class="l-features__title">Animation Creation</h3>
+              <p class="l-features__description">
+                Generate compelling animations of your 3D data for
+                presentations, publications, or educational materials with
+                built-in animation tools.
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- パネル3 -->
-          <div class="l-contents__panel panel-3">
-            <div class="l-contents__panel-img panel-3">
-              <img src="./assets/img/transfer_editing.png" alt="" / class="br10
-              bs">
-            </div>
-            <div class="l-contents__panel-text panel-3">
-              <h1>
-                Precision Control<br />
-                Over Volume Rendering
-              </h1>
-              <h2>
-                Intuitive transfer function editing with real-time feedback.
-              </h2>
-              <p>
-                Acto3D provides a fully interactive transfer function editor,
-                allowing seamless adjustment of color and opacity curves across
-                multiple channels. Users can fine-tune rendering in real time,
-                enhancing contrast and highlighting specific features within
-                complex volumetric datasets.
-              </p>
-            </div>
+      <!-- workflow section -->
+      <section id="workflow" class="l-workflow">
+        <div class="c-blob-container">
+          <div class="blob blob-3"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-1"></div>
+        </div>
+        <div class="l-workflow__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">
+              Streamlined <span class="neon-green">Workflow</span>
+            </h2>
+            <p class="l-section__subtitle">
+              From image acquisition to stunning visualization in five
+              comprehensive steps
+            </p>
           </div>
-
-          <!-- パネル4 -->
-          <div class="l-contents__panel-block">
-            <div class="l-contents__panel panel-4">
-              <div class="l-contents__panel-text panel-4">
-                <h1>3D Masking</h1>
-                <div class="l-contents__panel-img panel-4">
-                  <img src="./assets/img/sc4.png" alt="" / class="">
+          <div class="l-workflow__flow-container">
+            <div class="l-workflow__path"></div>
+            <div class="l-workflow__steps">
+              <div class="l-workflow__step">
+                <div class="l-workflow__step-number number-blue">01</div>
+                <div class="l-workflow__content">
+                  <h3 class="l-workflow__title neon-blue">
+                    Acquire Microscopy Images
+                  </h3>
+                  <p class="l-workflow__description">
+                    Capture your fluorescence microscopy images with your
+                    preferred imaging system. Acto3D works with standard
+                    microscopy data formats.
+                  </p>
                 </div>
-                <p>
-                  Efficient segmentation of enclosed structures — from any angle
-                  in 3D.
-                </p>
-              </div>
-            </div>
-
-            <div class="l-contents__panel panel-5" id="downloadSection">
-              <div class="l-contents__panel-text panel-5">
-                <h1>Ready to use</h1>
-                <h2>Just download it</h2>
-                <div class="l-contents__panel-img panel-5">
+                <div class="l-workflow__image">
                   <img
-                    src="./assets/img/icon.png"
-                    alt=""
-                    class="dl_acto3d_logo"
-                  /><br />
-                  <a
-                    href="https://apps.apple.com/us/app/acto3d/id1599768775"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="c-dl-links"
-                    ><img
-                      src="./assets/img/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
-                      alt=""
-                      class="c-dl-links__img"
-                    /> </a
-                  ><br />
-                  <a
-                    href="https://github.com/Acto3D/Acto3D/releases"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="c-dl-links"
-                    ><div class="github-icons">
-                      <img
-                        src="./assets/img/github-mark.svg"
-                        alt="GitHub icon"
-                        class="c-dl-links__img"
-                      /><img
-                        src="./assets/img/GitHub_Logo.png"
-                        alt="GitHub logo"
-                        class="c-dl-links__img"
-                      />
-                    </div>
-                  </a>
+                    src="./assets/img/workflow01.png"
+                    alt="Microscopy Image Acquisition"
+                    class="neon-border-blue"
+                  />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="l-contents full">
-        <div class="l-contents__inner">
-          <div class="l-contents__extra">
-            <h1>Even More Freedom in Visualization</h1>
-            <div class="l-contents__extra__panel">
-              <div class="img-only">
-                <img src="./assets/img/free-section.webp" alt="" />
-                <h2>Free Sectioning</h2>
-              </div>
-              <div class="img-only">
-                <img src="./assets/img/animation.webp" alt="" />
-                <h2>Animation</h2>
-              </div>
-              <div class="code-panel">
-                <div class="code-block">
-                  <pre>
-kernel void FTB(){
-  Cin = Cout;
-  Ain = Aout;
-  Cvoxel = (float4)args.tex.sample
-        (args.smp, texCoordinate);
-}</pre
-                  >
-                </div>
-                <!-- <h2>Animation</h2> -->
-                <h2>Programmable Shaders</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- section bar -->
-    <div class="c-grad-bar reverse">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
 
+              <div class="l-workflow__step">
+                <div class="l-workflow__step-number number-green">02</div>
+                <div class="l-workflow__content">
+                  <h3 class="l-workflow__title neon-green">
+                    Convert to TIFF with Fiji
+                  </h3>
+                  <p class="l-workflow__description">
+                    Use Fiji (ImageJ) to process and convert your microscopy
+                    images to TIFF format, preparing them for 3D reconstruction
+                    and visualization.
+                  </p>
+                </div>
+                <div class="l-workflow__image">
+                  <div class="l-workflow__image-container">
+                    <img
+                      src="./assets/img/fiji.png"
+                      alt="Microscopy Image Acquisition"
+                      class="image-250"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- item -->
+              <div class="l-workflow__step">
+                <div class="l-workflow__step-number number-pink">03</div>
+                <div class="l-workflow__content">
+                  <h3 class="l-workflow__title neon-pink">
+                    Import Into Acto3D
+                  </h3>
+                  <p class="l-workflow__description">
+                    Load your processed TIFF files into Acto3D with a simple
+                    drag-and-drop interface. The software automatically
+                    organizes and prepares your data for rendering.
+                  </p>
+                </div>
+                <div class="l-workflow__image">
+                  <img
+                    src="./assets/img/workflow03.jpg"
+                    alt="Microscopy Image Acquisition"
+                    class="neon-border-pink"
+                  />
+                </div>
+              </div>
+              <!-- end item -->
+
+              <!-- item -->
+              <div class="l-workflow__step">
+                <div class="l-workflow__step-number number-blue">04</div>
+                <div class="l-workflow__content">
+                  <h3 class="l-workflow__title neon-blue">
+                    Fine-Tune Visualization
+                  </h3>
+                  <p class="l-workflow__description">
+                    Use Acto3D's intuitive transfer function editor to perfect
+                    color and opacity across multiple channels, enhancing
+                    contrast and highlighting specific features within your
+                    complex volumetric data.
+                  </p>
+                </div>
+                <div class="l-workflow__image">
+                  <img
+                    src="./assets/img/transfer_editing.png"
+                    alt="Microscopy Image Acquisition"
+                    class="neon-border-blue"
+                  />
+                </div>
+              </div>
+              <!-- end item -->
+              <!-- item -->
+              <div class="l-workflow__step">
+                <div class="l-workflow__step-number number-green">05</div>
+                <div class="l-workflow__content">
+                  <h3 class="l-workflow__title neon-green">
+                    Create Dynamic Presentations
+                  </h3>
+                  <p class="l-workflow__description">
+                    Generate stunning animations and interactive 3D
+                    visualizations for scientific presentations, publications,
+                    and in-depth analysis of complex biological structures.
+                  </p>
+                </div>
+                <div class="l-workflow__image">
+                  <img
+                    src="./assets/img/workflow05.png"
+                    alt="Microscopy Image Acquisition"
+                    class="neon-border-green"
+                  />
+                </div>
+              </div>
+              <!-- end item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- code section -->
+      <section class="l-code">
+        <div class="c-blob-container">
+          <div class="blob blob-1"></div>
+        </div>
+        <div class="l-code__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">
+              Advanced <span class="neon-blue">Programmable</span> Features
+            </h2>
+            <p class="l-section__subtitle">
+              Take complete control of your visualization with custom Metal
+              shaders
+            </p>
+          </div>
+
+          <div class="l-code__blockcontainer">
+            <div class="l-code__block">
+              <div class="l-code__header">
+                <div class="l-code__dots">
+                  <div class="l-code__dots-dot"></div>
+                  <div class="l-code__dots-dot"></div>
+                  <div class="l-code__dots-dot"></div>
+                </div>
+                <div class="l-code__title">Shader.metal</div>
+              </div>
+              <div class="l-code__content">
+                <pre>
+<span class="l-code__line"><span class="l-code__number">01</span><span class="keyword">kernel</span> <span class="keyword"> void</span> <span class="function"> FTB</span>( *param ) {</span>
+<span class="l-code__line"><span class="l-code__number">02</span>  Cin = Cout;</span>
+<span class="l-code__line"><span class="l-code__number">03</span>  Ain = Aout;</span>
+<span class="l-code__line"><span class="l-code__number">04</span>  Cvoxel = <span class="function">(float4)</span>args.tex.sample</span>
+<span class="l-code__line"><span class="l-code__number">05</span>        (args.smp, texCoordinate);</span>
+<span class="l-code__line"><span class="l-code__number">06</span>}</span></pre>
+              </div>
+            </div>
+            <div class="l-code__description">
+              <p>
+                Unlike commercial software, Acto3D is completely open-source,
+                allowing you to customize every aspect of the GPU rendering
+                process. Advanced users gain full transparency into how their
+                microscopy data is visualized.
+              </p>
+              <p>
+                The greatest advantage of volume rendering is the ability to
+                adjust visualization through transfer functions. Acto3D gives
+                advanced users programmatic control over these functions for
+                more detailed and precise control.
+              </p>
+              <a
+                href="https://github.com/Acto3D/Acto3D/blob/main/instruction.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="c-btn c-btn--blue"
+              >
+                View Documentation
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
+      <!-- Download section -->
+      <section id="download" class="l-download">
+        <div class="blob-container">
+          <div class="blob blob-3"></div>
+        </div>
+        <div class="l-download__container">
+          <div class="l-section__header">
+            <h2 class="l-section__title">
+              Get <span class="neon-pink">Acto3D</span> Today
+            </h2>
+            <p class="l-section__subtitle">
+              Free and open-source, optimized specifically for Apple Silicon
+              Macs to deliver exceptional performance
+            </p>
+          </div>
+
+          <div class="l-download__options">
+            <a
+              href="https://apps.apple.com/us/app/acto3d/id1599768775"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="l-download__card">
+                <div class="l-download__icon">
+                  <i class="fab fa-app-store-ios"></i>
+                </div>
+                <h3 class="l-download__title">Mac App Store</h3>
+                <p class="l-download__description">
+                  Easiest installation method with automatic updates
+                </p>
+                <div class="l-download__badge-container">
+                  <img
+                    src="./assets/img/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg"
+                    alt="Download on the App Store"
+                    class="l-download__badge"
+                  />
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/Acto3D/Acto3D/releases"
+              target="_blank"
+              rel="noopener noreferrer"
+              class=""
+            >
+              <div class="l-download__card">
+                <div class="l-download__icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <h3 class="l-download__title">GitHub</h3>
+                <p class="l-download__description">
+                  Access source code and latest development builds
+                </p>
+                <span class="c-btn c-btn--deepgreen">Download</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
+    </main>
     <footer class="l-footer">
       Copyright © 2023 Naoki Takeshita. All rights reserved.
     </footer>
 
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-    <script src="./assets/js/common.js"></script>
+    <!-- <script src="./assets/js/slick.min.js"></script> -->
+    <!-- <script src="./assets/js/common.js"></script> -->
   </body>
 </html>
